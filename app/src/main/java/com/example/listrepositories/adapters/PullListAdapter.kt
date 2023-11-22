@@ -14,18 +14,16 @@ import com.example.listrepositories.models.PullsItem
 
 class PullListAdapter(
     val context: Context,
-    private val item: Item,
     private val listPullRequests: MutableList<PullsItem>,
     private val onItemClickListener: ((pulls: PullsItem) -> Unit)
 ) : RecyclerView.Adapter<PullListAdapter.MyViewHolder>() {
     inner class  MyViewHolder(itemView: View, private val onItemClickListener: ((pulls: PullsItem) -> Unit)): RecyclerView.ViewHolder(itemView) {
 
         fun bindView(pulls: PullsItem) {
-
-
             itemView.findViewById<TextView>(R.id.tv_repository_name).text = pulls.title
             itemView.findViewById<TextView>(R.id.tv_repository_description).text = pulls.body
             itemView.findViewById<TextView>(R.id.tv_user).text = pulls.user.login
+            itemView.findViewById<TextView>(R.id.tv_user_fullname).text = pulls.user.type
 
 
             Glide.with(context)

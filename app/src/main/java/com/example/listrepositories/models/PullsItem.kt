@@ -42,8 +42,6 @@ data class PullsItem(
     val id: Int,
     @SerializedName("issue_url")
     val issueUrl: String,
-    @SerializedName("labels")
-    val labels:@RawValue List<Label>,
     @SerializedName("_links")
     val links:@RawValue Links,
     @SerializedName("locked")
