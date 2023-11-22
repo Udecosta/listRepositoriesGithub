@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardElevation="10dp"
+    android:layout_margin="1dp"
+    android:theme="@style/CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp">
+
+
+    <TextView
+        android:id="@+id/tv_name_repository"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:paddingEnd="16dp"
+        android:text="TextView"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/iv_avatar_repository"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_description_repository"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:maxLines="3"
+        android:paddingRight="16dp"
+        android:text="TextView"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_name_repository"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_repository"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_repository" />
+
+    <TextView
+        android:id="@+id/tv_forks"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="TextView"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_description_repository"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description_repository" />
+
+    <TextView
+        android:id="@+id/tv_stars_repository"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_forks"
+        app:layout_constraintEnd_toEndOf="@+id/tv_description_repository"
+        app:layout_constraintStart_toEndOf="@+id/tv_forks"
+        app:layout_constraintTop_toTopOf="@+id/tv_forks" />
+
+    <ImageView
+        android:id="@+id/iv_avatar_repository"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_name_repository"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/iv_avatar_repository"
+        app:layout_constraintStart_toStartOf="@+id/iv_avatar_repository"
+        app:layout_constraintTop_toBottomOf="@+id/iv_avatar_repository" />
+
+    <TextView
+        android:id="@+id/tv_lastname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_username"
+        app:layout_constraintStart_toStartOf="@+id/tv_username"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
